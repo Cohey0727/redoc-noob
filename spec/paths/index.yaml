@@ -4,3 +4,5 @@
   $ref: "./schedules/schedule.yaml"
 /memos:
   $ref: "./schedules/memo.yaml"
+/schedules/free_busy:
+  $ref: "./schedules/schedule_free_busy.yaml"
