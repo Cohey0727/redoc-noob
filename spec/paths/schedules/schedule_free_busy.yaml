@@ -1,4 +1,4 @@
-post:
+get:
   security:
     - APIキー: []
       OAuth2(Internal): [schedules:read]
@@ -6,17 +6,32 @@ post:
     - Schedules
   summary: Schedule Free Budy
   description: Returns free/busy information for a set of schedules
-  requestBody:
-    description: schedule free/busy
-    content:
-      application/json:
-        schema:
-          required:
-            - data
-          properties:
-            data:
-              description: "予定データ"
-              $ref: "../../components/schemas/schedules/schedule.yaml"
+  parameters:
+    - in: path
+      name: time_min
+      required: true
+      schema:
+        type: string
+        format: datetime
+      description: "開始時刻"
+      example: "2021-09-01T12:00:00+09:00"
+    - in: path
+      name: time_max
+      required: true
+      schema:
+        type: string
+        format: datetime
+      description: "終了時刻"
+      example: "2021-09-02T12:00:00+09:00"
+    - in: path
+      name: user_ids
+      required: true
+      schema:
+        type: array
+        items:
+          type: integer
+      example: [123456789, 987654321]
+      description: "ユーザーIDリスト"
   responses:
     "200":
       description: 200 response
@@ -25,6 +40,4 @@ post:
           schema:
             type: object
             properties:
-              data:
-                description: "予定データ"
-                $ref: "../../components/schemas/schedules/schedule.yaml"
+              $ref: "../../components/schemas/schedules/schedule_free_busy_response.yaml"
