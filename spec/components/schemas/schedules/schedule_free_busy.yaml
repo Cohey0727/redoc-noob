@@ -1,20 +1,17 @@
 type: object
 properties:
-  data:
-    type: object
-    properties:
-      busy:
-        type: array
-        items:
-          type: object
-          properties:
-            start_at:
-              type: string
-              format: datetime
-              description: "開始時刻"
-              example: "2021-09-02T12:00:00+09:00"
-            end_at:
-              type: string
-              format: datetime
-              description: "終了時刻"
-              example: "2021-09-02T12:00:00+09:00"
+  busy:
+    type: array
+    items:
+      type: object
+      properties:
+        start_at:
+          type: string
+          format: datetime
+          description: "開始時刻"
+          example: "2021-09-02T12:00:00+09:00"
+        end_at:
+          type: string
+          format: datetime
+          description: "終了時刻"
+          example: "2021-09-02T12:00:00+09:00"

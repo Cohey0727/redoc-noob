@@ -7,7 +7,7 @@ get:
   summary: Schedule Free Budy
   description: Returns free/busy information for a set of schedules
   parameters:
-    - in: path
+    - in: query
       name: time_min
       required: true
       schema:
@@ -15,7 +15,7 @@ get:
         format: datetime
       description: "開始時刻"
       example: "2021-09-01T12:00:00+09:00"
-    - in: path
+    - in: query
       name: time_max
       required: true
       schema:
@@ -23,7 +23,7 @@ get:
         format: datetime
       description: "終了時刻"
       example: "2021-09-02T12:00:00+09:00"
-    - in: path
+    - in: query
       name: user_ids
       required: true
       schema:
@@ -40,4 +40,5 @@ get:
           schema:
             type: object
             properties:
-              $ref: "../../components/schemas/schedules/schedule_free_busy_response.yaml"
+              data:
+                $ref: "../../components/schemas/schedules/schedule_free_busy.yaml"
