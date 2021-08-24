@@ -4,7 +4,7 @@ get:
       OAuth2(Internal): [schedules:read]
   tags:
     - Schedules
-  summary: Schedule Free Budy
+  summary: Schedule Free Busy
   description: Returns free/busy information for a set of schedules
   parameters:
     - in: query
