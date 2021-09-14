@@ -4,7 +4,6 @@ allOf:
     required:
       - start_at
       - end_at
-      - user_id
       - guest_user_ids
     properties:
       start_at:
