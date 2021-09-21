@@ -24,7 +24,7 @@ get:
       description: "終了時刻"
       example: "2021-09-02T12:00:00+09:00"
     - in: query
-      name: user_ids
+      name: user_ids[]
       required: true
       schema:
         type: array
