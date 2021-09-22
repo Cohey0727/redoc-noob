@@ -28,14 +28,4 @@ post:
                 - $ref: "../../components/schemas/customers/corporation_customer.yaml"
   responses:
     "200":
-      description: 200 response
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              data:
-                description: "個人顧客データまたは、法人顧客データ"
-                oneOf:
-                  - $ref: "../../components/schemas/customers/individual_customer.yaml"
-                  - $ref: "../../components/schemas/customers/corporation_customer.yaml"
+      $ref: "../../components/responses/customer/200.yaml"
