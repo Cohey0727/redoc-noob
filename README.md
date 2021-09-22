@@ -18,7 +18,8 @@ and open http://localhost:9090
 ```shell
 yarn run build
 ```
+`public` is output directory
 
 ## VSCode 拡張機能
+![image](https://user-images.githubusercontent.com/67470479/134301115-3386c01d-39fc-4faf-8c38-2e14fb666694.png)
 
-`public` is output directory
