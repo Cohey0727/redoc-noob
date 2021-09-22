@@ -1,0 +1,31 @@
+get:
+  security:
+    - APIキー: []
+      OAuth2(Internal): [customers:read]
+  tags:
+    - Customers
+  summary: Retrieve Customer
+  description: Retrieve a customer by id
+  parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: int64
+        minimum: 1
+      description: 顧客 ID
+      example: 12345678
+
+  responses:
+    "200":
+      description: 200 response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                description: "個人顧客データまたは、法人顧客データ"
+                oneOf:
+                  - $ref: "../../components/schemas/customers/individual_customer.yaml"
+                  - $ref: "../../components/schemas/customers/corporation_customer.yaml"

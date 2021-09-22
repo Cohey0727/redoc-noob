@@ -1,5 +1,7 @@
 /customers:
   $ref: "./customers/index.yaml"
+/customers/{id}:
+  $ref: "./customers/detail.yaml"
 /schedules:
   $ref: "./schedules/schedule.yaml"
 /memos:
