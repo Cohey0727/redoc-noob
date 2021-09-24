@@ -4,7 +4,7 @@ allOf:
       - "customer_type"
     properties:
       id:
-        type: number
+        type: int64
         example: 12345678
         description: "顧客ID"
         readOnly: true
@@ -13,11 +13,11 @@ allOf:
         example: "individual"
         description: "顧客タイプ(個人:individual, 法人:corporation)"
       person_in_charge_id:
-        type: number
+        type: int64
         description: "担当者ユーザーID"
         example: 100
       vice_person_in_charge_id:
-        type: number
+        type: int64
         description: "副担当者ユーザーID"
         example: 200
       zip:
