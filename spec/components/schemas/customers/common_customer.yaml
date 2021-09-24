@@ -15,9 +15,11 @@ allOf:
       person_in_charge_id:
         type: number
         description: "担当者ユーザーID"
+        example: 100
       vice_person_in_charge_id:
         type: number
         description: "副担当者ユーザーID"
+        example: 200
       zip:
         type: string
         description: "郵便番号"
