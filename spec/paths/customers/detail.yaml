@@ -4,8 +4,8 @@ get:
       OAuth2(Internal): [customers:read]
   tags:
     - Customers
-  summary: Retrieve Customer
-  description: Retrieve a customer by id
+  summary: Retrieve a Customer
+  description: Retrieve customer details
   parameters:
     - in: path
       name: id
