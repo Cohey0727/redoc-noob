@@ -1,0 +1,76 @@
+get:
+  security:
+    - APIキー: []
+      OAuth2(Internal): [customers:read]
+  tags:
+    - Customers
+  summary: Retrieve a Customer
+  description: Retrieve customer details
+  parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: int64
+        minimum: 1
+      description: 顧客 ID
+      example: 12345678
+
+  responses:
+    "200":
+      description: 200 response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                description: "個人顧客データまたは、法人顧客データ"
+                oneOf:
+                  - $ref: "../../components/schemas/customers/individual_customer.yaml"
+                  - $ref: "../../components/schemas/customers/corporation_customer.yaml"
+
+put:
+  security:
+    - APIキー: []
+      OAuth2(Internal): [customers:update]
+  tags:
+    - Customers
+  summary: Update a Customer
+  description: update a customer
+  parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: int64
+        minimum: 1
+      description: 顧客 ID
+      example: 12345678
+
+  requestBody:
+    description: customer payload
+    content:
+      application/json:
+        schema:
+          required:
+            - "data"
+          properties:
+            data:
+              description: "個人顧客データまたは、法人顧客データ"
+              oneOf:
+                - $ref: "../../components/schemas/customers/individual_customer.yaml"
+                - $ref: "../../components/schemas/customers/corporation_customer.yaml"
+  responses:
+    "200":
+      description: 200 response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                description: "個人顧客データまたは、法人顧客データ"
+                oneOf:
+                  - $ref: "../../components/schemas/customers/individual_customer.yaml"
+                  - $ref: "../../components/schemas/customers/corporation_customer.yaml"
