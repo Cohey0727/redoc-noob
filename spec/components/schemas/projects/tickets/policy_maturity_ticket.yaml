@@ -11,15 +11,3 @@ allOf:
         format: datetime
         description: "対応時刻"
         example: "2020-03-04T12:00:00+09:00"
-      user_id:
-        type: number
-        description: "担当者"
-        example: 1234567
-      customer_id:
-        type: number
-        description: "対応顧客"
-        example: 1234567
-      extra_item_group_id:
-        type: number
-        description: "メモフォーマットID"
-        example: 123123123

@@ -5,11 +5,21 @@ properties:
     example: 12345678
     description: "ID"
     readOnly: true
-  title:
+  term:
     type: string
-    example: "タイトル"
-    description: "タイトル"
-  content:
+    format: datetime
+    description: "期間(指定した日付が含まれている月にチケットが作成されます)"
+    example: "2021-11-01T12:00:00+09:00"
+  customer_id:
+    type: number
+    example: 123
+    description: 顧客ID
+  user_id:
+    type: number
+    example: 123
+    description: 担当者ID
+  expired_at:
     type: string
-    example: "内容"
-    description: "内容"
+    format: datetime
+    description: "期日"
+    example: "2021-11-01T12:00:00+09:00"
