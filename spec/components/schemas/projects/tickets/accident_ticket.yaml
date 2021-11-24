@@ -5,9 +5,40 @@ allOf:
       - start_at
       - user_id
       - customer_id
+      - policy_ids
     properties:
-      start_at:
+      policy_ids:
+        type: array
+        description: |
+          チケットに紐付ける契約IDのリスト。<br>
+          以下の場合エラーになります<br>
+          - 顧客に紐づいていない契約のidを指定した場合はエラーになります。<br>
+          - またpolicy_idsは必須であり、1件以外が指定された場合はエラーになります。
+        items:
+          type: number
+        example:
+          - 1
+      accident_number:
         type: string
         format: datetime
-        description: "対応時刻"
+        description: "事故管理ナンバー"
+        example: "ACCIDENT-123"
+      accident_date:
+        type: string
+        format: datetime
+        description: "事故発生日時"
         example: "2020-03-04T12:00:00+09:00"
+      coverage_amount:
+        type: number
+        description: "保障金額または補償金額"
+        example: 123000
+      coverage_amount_unit:
+        type: number
+        description: |
+          保障金額または補償金額の単位<br>
+          0: 未設定
+          1: 円
+          2: ドル
+          3: 豪ドル
+          4: ユーロ
+        example: 1

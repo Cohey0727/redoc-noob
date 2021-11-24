@@ -2,12 +2,17 @@ allOf:
   - $ref: "./base_ticket.yaml"
   - type: object
     required:
-      - start_at
       - user_id
       - customer_id
     properties:
-      start_at:
-        type: string
-        format: datetime
-        description: "対応時刻"
-        example: "2020-03-04T12:00:00+09:00"
+      policy_ids:
+        type: array
+        description: |
+          チケットに紐付ける契約IDのリスト。<br>
+          - 顧客に紐づいていない契約のidを指定した場合はエラーになります。<br>
+          - またpolicy_idsは必須であり、1件以外が指定された場合はエラーになります。
+        items:
+          type: number
+        example:
+          - 1
+          - 2

@@ -23,17 +23,3 @@ properties:
     format: datetime
     description: "期日"
     example: "2021-11-01T12:00:00+09:00"
-  policy_ids:
-    type: array
-    description: |
-      チケットに紐付ける契約IDのリスト(顧客に紐づいている契約のid以外を指定するとエラーになります。)<br>
-      満期更改: 1件(必須)<br>
-      募集: 複数可<br>
-      事故対応: 1件(必須)<br>
-      その他: 複数<br>
-    items:
-      type: number
-    example:
-      - 1
-      - 2
-      - 3
