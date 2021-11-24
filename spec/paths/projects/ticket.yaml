@@ -15,7 +15,8 @@ post:
             - "data"
           properties:
             data:
-              description: "作成するチケットの詳細データ"
+              description: |
+                作成するチケットの詳細データです。
               oneOf:
                 - $ref: "../../components/schemas/projects/tickets/policy_maturity_ticket.yaml"
                 - $ref: "../../components/schemas/projects/tickets/sales_ticket.yaml"
