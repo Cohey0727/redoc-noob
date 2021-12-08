@@ -1,3 +1,4 @@
+title: 満期更改プロジェクト
 allOf:
   - $ref: "./base_ticket.yaml"
   - type: object

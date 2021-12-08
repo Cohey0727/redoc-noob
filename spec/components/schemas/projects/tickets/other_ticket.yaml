@@ -1,3 +1,4 @@
+title: その他プロジェクト
 allOf:
   - $ref: "./base_ticket.yaml"
   - type: object
