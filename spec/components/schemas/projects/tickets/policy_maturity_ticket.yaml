@@ -6,15 +6,14 @@ allOf:
       - term
       - customer_id
       - user_id
-      - policy_ids
+      - before_maturity_policy_id
     properties:
-      policy_ids:
-        type: array
+      before_maturity_policy_id:
+        type: number
         description: |
-          チケットに紐付ける契約IDのリスト。<br>
+          チケットに紐付ける更改前契約IDのリスト。<br>
           指定された契約は、更改前契約として登録されます。<br>
           顧客に紐づいていない契約のidを指定した場合エラーになります。<br>
-          またpolicy_idsは必須であり、1件以外が指定された場合はエラーになります。
         items:
           type: number
         example:

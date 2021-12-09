@@ -3,25 +3,24 @@ allOf:
   - $ref: "./base_ticket.yaml"
   - type: object
     required:
+      - term
       - start_at
       - user_id
       - customer_id
-      - policy_ids
+      - policy_id
     properties:
-      policy_ids:
-        type: array
+      policy_id:
+        type: number
         description: |
           チケットに紐付ける契約IDのリスト。<br>
           以下の場合エラーになります<br>
           顧客に紐づいていない契約のidを指定した場合はエラーになります。<br>
-          またpolicy_idsは必須であり、1件以外が指定された場合はエラーになります。
         items:
           type: number
         example:
           - 1
       accident_number:
         type: string
-        format: datetime
         description: "事故管理ナンバー"
         example: "ACCIDENT-123"
       accident_date:

@@ -3,6 +3,7 @@ allOf:
   - $ref: "./base_ticket.yaml"
   - type: object
     required:
+      - term
       - user_id
       - customer_id
     properties:
