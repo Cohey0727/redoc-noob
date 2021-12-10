@@ -12,8 +12,7 @@ allOf:
       policy_id:
         type: number
         description: |
-          チケットに紐付ける契約IDのリスト。<br>
-          以下の場合エラーになります<br>
+          チケットに紐付ける契約ID。<br>
           顧客に紐づいていない契約のidを指定した場合はエラーになります。<br>
         items:
           type: number
