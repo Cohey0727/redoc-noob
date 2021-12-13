@@ -14,7 +14,4 @@ allOf:
           チケットに紐付ける更改前契約ID。<br>
           指定された契約は、更改前契約として登録されます。<br>
           顧客に紐づいていない契約のidを指定した場合エラーになります。<br>
-        items:
-          type: number
-        example:
-          - 1
+        example: 1

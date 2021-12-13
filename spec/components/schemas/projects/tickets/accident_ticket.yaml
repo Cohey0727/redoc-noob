@@ -14,10 +14,7 @@ allOf:
         description: |
           チケットに紐付ける契約ID。<br>
           顧客に紐づいていない契約のidを指定した場合はエラーになります。<br>
-        items:
-          type: number
-        example:
-          - 1
+        example: 1
       accident_number:
         type: string
         description: "事故管理ナンバー"
