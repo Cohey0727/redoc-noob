@@ -7,9 +7,9 @@ properties:
     readOnly: true
   term:
     type: string
-    format: datetime
+    format: date
     description: "期間(指定した日付が含まれている月にチケットが作成されます)"
-    example: "2021-11-01T12:00:00+09:00"
+    example: "2021-11-01"
   customer_id:
     type: number
     example: 123
@@ -20,6 +20,6 @@ properties:
     description: 担当者ID
   expired_at:
     type: string
-    format: datetime
+    format: date
     description: "期日"
-    example: "2021-11-01T12:00:00+09:00"
+    example: "2021-11-01"
