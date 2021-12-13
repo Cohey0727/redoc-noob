@@ -20,6 +20,6 @@ properties:
     description: 担当者ID
   expired_at:
     type: string
-    format: date
+    format: datetime
     description: "期日"
-    example: "2021-11-01"
+    example: "2021-11-01T12:00:00+09:00"
