@@ -1,0 +1,39 @@
+post:
+  security:
+    - APIキー: []
+      OAuth2(Internal): [tickets:create]
+  tags:
+    - Projects
+  summary: Create Project Ticket
+  description: Create a new Ticket
+  requestBody:
+    description: create a ticket
+    content:
+      application/json:
+        schema:
+          required:
+            - "data"
+          properties:
+            data:
+              description: |
+                作成するチケットの詳細データです。
+              oneOf:
+                - $ref: "../../components/schemas/projects/tickets/policy_maturity_ticket.yaml"
+                - $ref: "../../components/schemas/projects/tickets/sales_ticket.yaml"
+                - $ref: "../../components/schemas/projects/tickets/accident_ticket.yaml"
+                - $ref: "../../components/schemas/projects/tickets/other_ticket.yaml"
+  responses:
+    "200":
+      description: 200 response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                description: "作成されたチケットの詳細データ"
+                oneOf:
+                  - $ref: "../../components/schemas/projects/tickets/policy_maturity_ticket.yaml"
+                  - $ref: "../../components/schemas/projects/tickets/sales_ticket.yaml"
+                  - $ref: "../../components/schemas/projects/tickets/accident_ticket.yaml"
+                  - $ref: "../../components/schemas/projects/tickets/other_ticket.yaml"

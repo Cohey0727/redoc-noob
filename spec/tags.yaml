@@ -4,3 +4,5 @@
   description: Access to Memo
 - name: Schedules
   description: Access to Schedule
+- name: Projects
+  description: Access to Project
