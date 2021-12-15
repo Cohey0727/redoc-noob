@@ -8,7 +8,8 @@ properties:
   term:
     type: string
     format: date
-    description: "期間(指定した日付が含まれている月にチケットが作成されます)"
+    description: "期間(指定した日付が含まれている月にチケットが作成されます)。<br>
+                  プロジェクトに存在しない期間を指定した場合はエラーになります。"
     example: "2021-11-01"
   customer_id:
     type: number
@@ -17,7 +18,9 @@ properties:
   user_id:
     type: number
     example: 123
-    description: 担当者ID
+    description: "担当者ID。<br>
+                  プロジェクトに存在しない担当者を指定、もしくはuser_idにnullを指定した場合、担当者が未割り当てとなります。<br>
+                  また、customer_idで指定した顧客の閲覧権限を持っていない場合はエラーになります。"
   expired_at:
     type: string
     format: datetime
