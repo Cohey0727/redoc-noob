@@ -1,0 +1,71 @@
+allOf:
+  - $ref: "./common_customer.yaml"
+  - type: object
+    required:
+      - "last_name"
+    properties:
+      last_name:
+        type: string
+        description: "姓"
+        example: "保険"
+      first_name:
+        type: string
+        description: "名"
+        example: "太郎"
+      last_name_kana:
+        type: string
+        description: "姓カナ"
+        example: "ホケン"
+      first_name_kana:
+        type: string
+        description: "名カナ"
+        example: "タロウ"
+      gender:
+        type: number
+        description: "性別(男:1, 女:2, その他:3)"
+        example: 1
+      birthday:
+        type: string
+        description: "生年月日"
+        example: "1980-04-12"
+        format: date
+      annual_income:
+        type: number
+        description: "年収"
+        example: 5460000
+      savings:
+        type: number
+        description: "貯蓄"
+        example: 3200000
+      living_expenses:
+        type: number
+        description: "生活費"
+        example: 240000
+      industry:
+        type: string
+        description: "業種"
+        example: "金融・保険業"
+      job:
+        type: string
+        description: "職業"
+        example: "営業"
+      workplace:
+        type: string
+        description: "所属会社"
+        example: "株式会社hokan"
+      position:
+        type: string
+        description: "役職"
+        example: "専務取締役"
+      corporation_tel:
+        type: string
+        description: "会社電話番号"
+        example: "090-0123-4567"
+      corporation_email:
+        type: string
+        description: "会社Eメール"
+        example: "corporation@example.com"
+      corporation_mobile:
+        type: string
+        description: "会社電話番号"
+        example: "090-0123-4567"

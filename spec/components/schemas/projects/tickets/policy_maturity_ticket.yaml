@@ -1,0 +1,17 @@
+title: 満期更改プロジェクト
+allOf:
+  - $ref: "./base_ticket.yaml"
+  - type: object
+    required:
+      - term
+      - customer_id
+      - user_id
+      - before_maturity_policy_id
+    properties:
+      before_maturity_policy_id:
+        type: number
+        description: |
+          チケットに紐付ける更改前契約ID。<br>
+          指定された契約は、更改前契約として登録されます。<br>
+          顧客に紐づいていない契約のidを指定した場合エラーになります。<br>
+        example: 1

@@ -1,0 +1,34 @@
+post:
+  security:
+    - APIキー: []
+      OAuth2(Internal): [memos:create]
+  tags:
+    - Memos
+  summary: Create Memo
+  description: Create a new memo
+  requestBody:
+    description: memo create
+    content:
+      application/json:
+        schema:
+          required:
+            - data
+          properties:
+            notification_users:
+              type: array
+              example: [123123123, 456456456, 789789789]
+              description: "通知対象のユーザーIDリスト"
+            data:
+              description: "メモデータ"
+              $ref: "../../components/schemas/schedules/memo.yaml"
+  responses:
+    "200":
+      description: 200 response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                description: "メモデータ"
+                $ref: "../../components/schemas/schedules/memo.yaml"

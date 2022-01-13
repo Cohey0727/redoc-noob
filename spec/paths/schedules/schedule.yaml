@@ -1,0 +1,34 @@
+post:
+  security:
+    - APIキー: []
+      OAuth2(Internal): [schedules:create]
+  tags:
+    - Schedules
+  summary: Create Schedule
+  description: Create a new schedule
+  requestBody:
+    description: schedule create
+    content:
+      application/json:
+        schema:
+          required:
+            - data
+          properties:
+            notification_users:
+              type: array
+              example: [123123123, 456456456, 789789789]
+              description: "通知対象のユーザーIDリスト"
+            data:
+              description: "予定データ"
+              $ref: "../../components/schemas/schedules/schedule.yaml"
+  responses:
+    "200":
+      description: 200 response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                description: "予定データ"
+                $ref: "../../components/schemas/schedules/schedule.yaml"

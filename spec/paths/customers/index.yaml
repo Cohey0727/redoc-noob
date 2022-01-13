@@ -1,0 +1,41 @@
+post:
+  security:
+    - APIキー: []
+      OAuth2(Internal): [customers:create]
+  tags:
+    - Customers
+  summary: Create Customer
+  description: Create a new customer
+  requestBody:
+    description: user to create
+    content:
+      application/json:
+        schema:
+          required:
+            - "data"
+          properties:
+            notification_users:
+              type: array
+              example: [123123123, 456456456, 789789789]
+              description: "通知対象のユーザーIDリスト"
+            identify_same_customer:
+              type: boolean
+              description: "名寄せ利用(する:true, しない:false)"
+            data:
+              description: "個人顧客データまたは、法人顧客データ"
+              oneOf:
+                - $ref: "../../components/schemas/customers/individual_customer.yaml"
+                - $ref: "../../components/schemas/customers/corporation_customer.yaml"
+  responses:
+    "200":
+      description: 200 response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                description: "個人顧客データまたは、法人顧客データ"
+                oneOf:
+                  - $ref: "../../components/schemas/customers/individual_customer.yaml"
+                  - $ref: "../../components/schemas/customers/corporation_customer.yaml"
