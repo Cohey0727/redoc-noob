@@ -29,7 +29,7 @@ allOf:
       place:
         type: string
         description: "場所情報"
-        example: "東京"        
+        example: "東京"
       customer_id:
         type: number
         description: "予定参加顧客"
@@ -38,3 +38,7 @@ allOf:
         type: string
         description: "予定色コード"
         example: "#453590"
+      update_range:
+        type: number
+        example: 1
+        description: "編集権限(1:主催者＋マネージャーと管理者, 2:誰からでも編集可能)"
