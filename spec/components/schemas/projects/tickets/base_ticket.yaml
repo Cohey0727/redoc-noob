@@ -21,6 +21,12 @@ properties:
     description: "担当者ID。<br>
                   プロジェクトに存在しない担当者を指定、もしくはuser_idにnullを指定した場合、担当者が未割り当てとなります。<br>
                   また、customer_idで指定した顧客の閲覧権限を持っていない場合はエラーになります。"
+  vice_user_id:
+    type: number
+    example: 123
+    description: "副担当者ID。<br>
+                  担当者同様、プロジェクトに存在しない副担当者を指定、もしくはvice_user_idにnullを指定した場合、副担当者が未割り当てとなります。<br>
+                  また、customer_idで指定した顧客の閲覧権限を持っていない場合はエラーになります。"
   expired_at:
     type: string
     format: datetime
