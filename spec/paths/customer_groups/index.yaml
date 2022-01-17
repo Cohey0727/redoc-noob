@@ -1,0 +1,33 @@
+post:
+  security:
+    - APIキー: []
+      OAuth2(Internal): [customer_groups:create]
+  tags:
+    - CusomterGroups
+  summary: Create CustomerGroup
+  description: Create a new customer_group or update
+  requestBody:
+    description: customer_group create or update
+    content:
+      application/json:
+        schema:
+          required:
+            - data
+          properties:
+            data:
+              description: "世帯データ"
+              $ref: "../../components/schemas/customer_groups/customer_group.yaml"
+  responses:
+    "200":
+      description: 200 response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                properties:
+                  id:
+                    type: number
+                    example: 12345678
+                    description: "割り当て先の世帯ID"

@@ -2,6 +2,8 @@
   $ref: "./customers/index.yaml"
 /customers/{id}:
   $ref: "./customers/detail.yaml"
+/customer_groups:
+  $ref: "./customer_groups/index.yaml"
 /schedules:
   $ref: "./schedules/schedule.yaml"
 /memos:

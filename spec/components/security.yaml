@@ -7,7 +7,7 @@ APIキー:
     本APIを実行するにあたり、トークンをAPI Keyとしてヘッダに付与しなければ実行ができません。
 
     トークンは、hokan設定画面の「トークン発行機能」から発行することができます。
-    
+
     毎回の実行に対しトークンを付与しなければ、不正なアクセスとみなされAPIの実行ができません。
 
     なお、サーバー側ではBasic認証として処理する為、下記の形式でトークンを送付します。
@@ -20,7 +20,7 @@ OAuth2(Internal): # <---- arbitrary name
     本APIは権限管理処理を実現するために、内部的にOAuth2のスキームで権限管理を行います。
 
     権限の判定を行う前に認証処理を行い、上記のAPIキーを使用します。
-    
+
     発行時、下記の権限のうち適切なものをトークンに付与した上で発行しなければ、APIを実行時に権限不足のためエラーが発生します。
   flows:
     authorizationCode:
@@ -30,6 +30,7 @@ OAuth2(Internal): # <---- arbitrary name
         customers:read: Read customer information
         customers:create: Create new customer
         customers:update: Modify customer information
+        customer_groups:create: Create customer_group
         schedules:read: Read schedule information
         schedules:create: Create new schedule
         schedules:update: Modify schedule information
