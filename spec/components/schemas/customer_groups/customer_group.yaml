@@ -1,0 +1,43 @@
+type: object
+properties:
+  household_customer_id:
+    type: number
+    example: 12345678
+    description: |
+      **顧客ID** <br>
+      この顧客に紐づく世帯に `customer_group_members` を割り当てます。 <br>
+      存在しない or 世帯に属さない場合はエラーになります。
+  customer_group_members:
+    type: array
+    items:
+      type: object
+      required:
+        - customer_id
+      properties:
+        customer_id:
+          type: number
+          example: 12345678
+          description: |
+            **世帯に割り当てる顧客ID** <br>
+            存在しない or 世帯に属している場合はエラーになります。
+        role_id:
+          type: number
+          example: 101
+          description: |
+            **世帯に割り当てる顧客の続柄** <br>
+            不正な続柄が指定された場合はエラーになります。
+          oneOf:
+            - title: 100
+              description: 世帯主
+            - title: 101
+              description: 父
+            - title: 102
+              description: 母
+            - title: 103
+              description: 配偶者
+            - title: 104
+              description: 子
+            - title: 105
+              description: 兄弟姉妹
+            - title: 199
+              description: その他
