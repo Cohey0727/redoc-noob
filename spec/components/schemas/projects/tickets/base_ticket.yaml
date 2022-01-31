@@ -33,8 +33,11 @@ properties:
     format: datetime
     description: "期日"
     example: "2021-11-01T12:00:00+09:00"
-  schedule_id:
+  schedule_ids:
     type: number
-    example: 123
+    format: array
+    example: [1, 2, 3]
     description: "スケジュールID <br>
-      スケジュールIDを指定した場合、既存のスケジュールと紐づきます。"
+      スケジュールIDを指定した場合、既存のスケジュールと紐づきます。
+      複数のスケジュールIDを指定した場合、指定した複数のスケジュールを紐付きます。
+      "
