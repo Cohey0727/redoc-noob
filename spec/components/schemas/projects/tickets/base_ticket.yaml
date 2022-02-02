@@ -8,8 +8,9 @@ properties:
   term:
     type: string
     format: date
-    description: "期間(指定した日付が含まれている月にチケットが作成されます)。<br>
-                  プロジェクトに存在しない期間を指定した場合はエラーになります。"
+    description:
+      "期間(指定した日付が含まれている月にチケットが作成されます)。<br>
+      プロジェクトに存在しない期間を指定した場合はエラーになります。"
     example: "2021-11-01"
   customer_id:
     type: number
@@ -19,16 +20,34 @@ properties:
     type: number
     example: 123
     description: "担当者ID。<br>
-                  プロジェクトに存在しない担当者を指定、もしくはuser_idにnullを指定した場合、担当者が未割り当てとなります。<br>
-                  また、customer_idで指定した顧客の閲覧権限を持っていない場合はエラーになります。"
+      プロジェクトに存在しない担当者を指定、もしくはuser_idにnullを指定した場合、担当者が未割り当てとなります。<br>
+      また、customer_idで指定した顧客の閲覧権限を持っていない場合はエラーになります。"
   vice_user_id:
     type: number
     example: 123
     description: "副担当者ID。<br>
-                  担当者同様、プロジェクトに存在しない副担当者を指定、もしくはvice_user_idにnullを指定した場合、副担当者が未割り当てとなります。<br>
-                  また、customer_idで指定した顧客の閲覧権限を持っていない場合はエラーになります。"
+      担当者同様、プロジェクトに存在しない副担当者を指定、もしくはvice_user_idにnullを指定した場合、副担当者が未割り当てとなります。<br>
+      また、customer_idで指定した顧客の閲覧権限を持っていない場合はエラーになります。"
   expired_at:
     type: string
     format: datetime
     description: "期日"
     example: "2021-11-01T12:00:00+09:00"
+  calendar_ids:
+    type: number
+    format: array
+    example: [1, 2, 3]
+    description: "カレンダーID <br>
+      カレンダーIDは複数指定することができ、指定したカレンダーと紐付きます。<br>
+      カレンダーIDが存在しないものを指定した場合、エラーになり紐付きを行いません。 <br>
+      指定したカレンダーのcustomer_idとチケットのcustomer_idが異なる場合、エラーになり紐付きを行いません。
+      "
+  memo_ids:
+    type: number
+    format: array
+    example: [1, 2, 3]
+    description: "メモID <br>
+      メモIDは複数指定することができ、指定したメモと紐付きます。<br>
+      メモIDが存在しないものを指定した場合、エラーになり紐付きを行いません。 <br>
+      指定したメモのcustomer_idとチケットのcustomer_idが異なる場合、エラーになり紐付きを行いません。
+      "
