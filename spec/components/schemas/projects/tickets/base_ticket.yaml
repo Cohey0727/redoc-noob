@@ -33,13 +33,21 @@ properties:
     format: datetime
     description: "期日"
     example: "2021-11-01T12:00:00+09:00"
-  schedule_ids:
+  calendar_ids:
     type: number
     format: array
     example: [1, 2, 3]
-    description: "スケジュールID <br>
-      スケジュールIDを指定した場合、既存のスケジュールと紐づきます。<br>
-      複数のスケジュールIDを指定した場合、指定した複数のスケジュールと紐付きます。<br>
-      スケジュールIDが存在しないものを指定した場合はエラーになります。 <br>
-      指定したスケジュールに他のcustomer_idが設定されている場合は紐付きを行いません。
+    description: "カレンダーID <br>
+      カレンダーIDは複数指定することができ、指定したカレンダーと紐付きます。<br>
+      カレンダーIDが存在しないものを指定した場合、エラーになり紐付きを行いません。 <br>
+      指定したカレンダーのcustomer_idとチケットのcustomer_idが異なる場合、エラーになり紐付きを行いません。
+      "
+  memo_ids:
+    type: number
+    format: array
+    example: [1, 2, 3]
+    description: "メモID <br>
+      メモIDは複数指定することができ、指定したメモと紐付きます。<br>
+      メモIDが存在しないものを指定した場合、エラーになり紐付きを行いません。 <br>
+      指定したメモのcustomer_idとチケットのcustomer_idが異なる場合、エラーになり紐付きを行いません。
       "
