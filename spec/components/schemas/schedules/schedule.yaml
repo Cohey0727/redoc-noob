@@ -42,3 +42,18 @@ allOf:
         type: number
         example: 1
         description: "編集権限(1:主催者＋マネージャーと管理者, 2:誰からでも編集可能)"
+      custom_notifications:
+        type: array
+        items:
+          type: object
+          properties:
+            arrival_number:
+              type: int
+              description: "通知時間です。<br>
+              設定した通知時間の前に通知します。"
+              example: 10
+            arrival_unit:
+              type: int
+              description: "通知時間の単位です。<br>
+              1(分),2(時間),3(日),4(週),5(月)から選択してください。"
+              example: 1
