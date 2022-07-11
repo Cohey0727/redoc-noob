@@ -18,3 +18,7 @@ allOf:
           - 1
           - 2
           - 3
+      lead_id:
+        type: number
+        description: チケットの流入経路IDを指定します。
+        example: 123
