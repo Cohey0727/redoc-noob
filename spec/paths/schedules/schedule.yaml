@@ -32,3 +32,11 @@ post:
               data:
                 description: "予定データ"
                 $ref: "../../components/schemas/schedules/schedule.yaml"
+    "400":
+      $ref: "../../components/schemas/common/400.yaml"
+    "401":
+      $ref: "../../components/schemas/common/401.yaml"
+    "403":
+      $ref: "../../components/schemas/common/403.yaml"
+    "503":
+      $ref: "../../components/schemas/common/503.yaml"

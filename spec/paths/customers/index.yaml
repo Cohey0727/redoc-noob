@@ -45,3 +45,5 @@ post:
       $ref: "../../components/schemas/common/401.yaml"
     "403":
       $ref: "../../components/schemas/common/403.yaml"
+    "503":
+      $ref: "../../components/schemas/common/503.yaml"

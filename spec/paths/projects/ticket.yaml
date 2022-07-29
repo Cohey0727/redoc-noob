@@ -37,3 +37,11 @@ post:
                   - $ref: "../../components/schemas/projects/tickets/sales_ticket.yaml"
                   - $ref: "../../components/schemas/projects/tickets/accident_ticket.yaml"
                   - $ref: "../../components/schemas/projects/tickets/other_ticket.yaml"
+    "400":
+      $ref: "../../components/schemas/common/400.yaml"
+    "401":
+      $ref: "../../components/schemas/common/401.yaml"
+    "403":
+      $ref: "../../components/schemas/common/403.yaml"
+    "503":
+      $ref: "../../components/schemas/common/503.yaml"

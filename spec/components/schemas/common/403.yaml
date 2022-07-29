@@ -1,9 +1,17 @@
-description: 403 response
+description: 403 Forbidden
 content:
   application/json:
     schema:
       type: object
       properties:
-        model:
+        status:
           type: string
-          example: xx
+          example: error
+        errors:
+          type: array
+          items:
+            type: string
+            example: アクセス権限がありません。
+        message:
+          type: string
+          example: Bad Request

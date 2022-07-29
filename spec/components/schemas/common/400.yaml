@@ -1,4 +1,4 @@
-description: 400 response
+description: 400 Bad Request
 content:
   application/json:
     schema:
@@ -12,6 +12,6 @@ content:
           items:
             type: string
             example: xxが有効ではありません
-        messsage:
+        message:
           type: string
           example: xxが有効ではありません
