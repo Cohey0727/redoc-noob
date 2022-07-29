@@ -1,0 +1,14 @@
+schema:
+  type: object
+    properties:
+      status:
+        type: string
+        example: error
+      errors:
+        type: array
+        items:
+          type: string
+          example: xxが有効ではありません
+      messsage:
+        type: string
+        example: xxが有効ではありません
