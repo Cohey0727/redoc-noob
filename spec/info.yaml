@@ -1,7 +1,12 @@
 title: hokan API
-description: hokan API
 termsOfService: https://www.hokan.io
 contact:
   name: hokan support
   url: https://www.hkn.jp
 version: 1.0.0
+description: |
+  # Under Maintenance
+  
+  hokan API のメンテナンス中はレスポンスステータス: `503` を返します。
+
+  クライアント側で `503` を受け取った場合に再送等の対応をお願いいたします。
