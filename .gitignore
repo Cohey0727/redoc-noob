@@ -118,3 +118,4 @@ dist
 index.html
 public
 .vscode
+.DS_Store
