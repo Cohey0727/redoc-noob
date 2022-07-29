@@ -1,0 +1,17 @@
+description: 403 Forbidden
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        status:
+          type: string
+          example: error
+        errors:
+          type: array
+          items:
+            type: string
+            example: アクセス権限がありません。
+        message:
+          type: string
+          example: Bad Request

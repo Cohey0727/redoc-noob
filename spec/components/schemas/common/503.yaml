@@ -1,0 +1,6 @@
+description: 503 Service Unavailable
+content:
+  application/json:
+    schema:
+      type: object
+

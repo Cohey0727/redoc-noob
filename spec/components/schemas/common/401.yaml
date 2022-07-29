@@ -1,0 +1,9 @@
+description: 401 Unauthorized
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        detail:
+          type: string
+          example: 認証情報が含まれていません。
