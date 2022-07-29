@@ -39,3 +39,9 @@ post:
                 oneOf:
                   - $ref: "../../components/schemas/customers/individual_customer.yaml"
                   - $ref: "../../components/schemas/customers/corporation_customer.yaml"
+    "400":
+      $ref: "../../components/schemas/common/400.yaml"
+    "401":
+      $ref: "../../components/schemas/common/401.yaml"
+    "403":
+      $ref: "../../components/schemas/common/403.yaml"

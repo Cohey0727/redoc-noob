@@ -1,0 +1,9 @@
+description: 403 response
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        model:
+          type: string
+          example: xx
