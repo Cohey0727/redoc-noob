@@ -65,7 +65,12 @@ put:
             - "data"
           properties:
             data:
-              description: "個人顧客データまたは、法人顧客データ"
+              description: |
+                個人顧客データまたは、法人顧客データ<br>
+                ※<br>
+                data に extra_values が含まれない場合、追加項目は更新されません。<br>
+                data に extra_values が含まれる場合、送信されていない追加項目は削除されます。<br>
+                既存の値を更新する場合、残したい追加項目の値を含んだ形で送信してください。<br>
               oneOf:
                 - $ref: "../../components/schemas/customers/individual_customer.yaml"
                 - $ref: "../../components/schemas/customers/corporation_customer.yaml"
