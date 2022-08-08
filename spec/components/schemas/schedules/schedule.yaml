@@ -38,6 +38,10 @@ allOf:
         type: string
         description: "予定色コード"
         example: "#453590"
+      activity_item_id:
+        type: number
+        description: "活動項目ID"
+        example: 123
       update_range:
         type: number
         example: 1
